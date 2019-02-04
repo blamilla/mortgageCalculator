@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link href="css/styles.css" rel="stylesheet" type="text/css">
+        <title>Mortgage Calculator</title>
+    </head>
+    <body class="page">
+        <header class="header">
+            <span>Mortgage Calculator</span>
+            <hr>
+        </header>
+
+        <div class="container">
+            <div class="calculator">
+                <div class="calculator__content">
+                    <div class="calculator__content__title">
+                        <span>Change values to calculate your results</span>
+                    </div>
+                    <hr>
+                    <div class="calculator__content__body">
+                        <div class="years-of-mortgage">
+                            <span>Years of mortgage</span>
+                            <div class="rangeSlider years-of-mortgage-slider"></div>
+                        </div>
+                        <div class="rate-of-interest">
+                            <span>Rate of interest (%)</span>
+                            <div class="rangeSlider rate-of-interest-slider"></div>
+                        </div>
+                        <div class="loan-amount">
+                            <span>Loan Amount</span>
+                            <br>
+                            <span class="input-currency">
+                                <input type="number" name="loan-amount" />
+                            </span>
+                        </div>
+                        <div class="annual-amounts">
+                            <div class="annual-tax">
+                                <span>Annual Tax</span>
+                                <br>
+                                <span class="input-currency">
+                                    <input type="number" name="annual-tax" />
+                                </span>
+                            </div>
+                            <div class="annual-insurance">
+                                <span>Annual Insurance</span>
+                                <br>
+                                <span class="input-currency">
+                                    <input type="number" name="annual-insurance" />
+                                </span>
+                            </div>
+                        </div>
+                        <div class="calculate">
+                            <button>Calculate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="results">
+                <div class="results-content">
+                    <span>Your results</span>
+                    <div class="results-amounts">
+                        <span>Principle & Interest</span>
+                        <span class="interest-value">$ --</span>
+                        <span>Tax</span>
+                        <span class="tax-value">$ --</span>
+                        <span>Insurance</span>
+                        <span class="insurance-value">$ --</span>
+                        <hr class="results-divider">
+                    </div>
+                    <div class="total-amounts">
+                        <span>Total Monthly Payment</span>
+                        <span class="total-value">$ --</span>
+                    </div>
+                </div>            
+            </div>
+        </div>
+
+        <footer class="footer">
+
+        </footer>
+
+        <script src="js/scripts.js" type="text/javascript"></script>
+
+    </body>
+</html>
