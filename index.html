@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
+        <meta charset="utf-8" name="viewport" content="width=device-width" />
         <link href="css/styles.css" rel="stylesheet" type="text/css">
         <title>Mortgage Calculator</title>
     </head>
     <body class="page">
         <header class="header">
             <span>Mortgage Calculator</span>
-            <hr>
+            <hr align="left">
         </header>
 
         <div class="container">
@@ -31,7 +31,8 @@
                             <span>Loan Amount</span>
                             <br>
                             <span class="input-currency">
-                                <input type="number" name="loan-amount" />
+                                <input type="number" id="loan-amount" name="loan-amount" required="required" oninput="hideLoanAmountErrorMessage()" />
+                                <span id="loanAmountErrorMessage"></span>
                             </span>
                         </div>
                         <div class="annual-amounts">
@@ -39,19 +40,21 @@
                                 <span>Annual Tax</span>
                                 <br>
                                 <span class="input-currency">
-                                    <input type="number" name="annual-tax" />
+                                    <input type="number" id="annual-tax" name="annual-tax" required="required" oninput="hideAnnualTaxErrorMessage()" />
+                                    <span id="annualTaxErrorMessage"></span>
                                 </span>
                             </div>
                             <div class="annual-insurance">
                                 <span>Annual Insurance</span>
                                 <br>
                                 <span class="input-currency">
-                                    <input type="number" name="annual-insurance" />
+                                    <input type="number" id="annual-insurance" name="annual-insurance" required="required" oninput="hideAnnualInsuranceErrorMessage()" />
+                                    <span id="annualInsuranceErrorMessage"></span>
                                 </span>
                             </div>
                         </div>
                         <div class="calculate">
-                            <button>Calculate</button>
+                            <button id="calculateBtn" onclick="calculateMortgage()">Calculate</button>
                         </div>
                     </div>
                 </div>
@@ -60,17 +63,41 @@
                 <div class="results-content">
                     <span>Your results</span>
                     <div class="results-amounts">
-                        <span>Principle & Interest</span>
-                        <span class="interest-value">$ --</span>
-                        <span>Tax</span>
-                        <span class="tax-value">$ --</span>
-                        <span>Insurance</span>
-                        <span class="insurance-value">$ --</span>
+                        <div class="row">
+                            <div class="columnTitle">
+                                <span>Principle & Interest</span>
+                            </div>
+                            <div class="columnValue">
+                                <span id="interest-value" class="interest-value">$ --</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="columnTitle">
+                                <span>Tax</span>
+                            </div>
+                            <div class="columnValue">
+                                <span id="tax-value" class="tax-value">$ --</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="columnTitle">
+                                <span>Insurance</span>
+                            </div>
+                            <div class="columnValue">
+                                <span id="insurance-value" class="insurance-value">$ --</span>
+                            </div>
+                        </div>                        
                         <hr class="results-divider">
                     </div>
                     <div class="total-amounts">
-                        <span>Total Monthly Payment</span>
-                        <span class="total-value">$ --</span>
+                        <div class="row">
+                            <div class="columnTitle">
+                                <span>Total Monthly Payment</span>
+                            </div>
+                            <div class="columnValue">
+                                <span id="total-value" class="total-value">$ --</span>
+                            </div>
+                        </div>
                     </div>
                 </div>            
             </div>

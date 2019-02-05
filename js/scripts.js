@@ -24,9 +24,11 @@ function Input(id) {
   this.interval = this.att.max - this.att.min;
 
   this.create = function(fatherElement) {
+    this.sliderContainer = document.createElement("div");
+    this.sliderContainer.setAttribute("class", "sliderContainer");
     this.minValue = document.createElement("div");
     this.minValue.innerHTML = this.att.min;
-    this.minValue.setAttribute("class", "minValue");    
+    this.minValue.setAttribute("class", "minValue");
     this.input = document.createElement("input");
     this.maxValue = document.createElement("div");
     this.maxValue.innerHTML = this.att.max;
@@ -39,9 +41,11 @@ function Input(id) {
         this.input.setAttribute(name, this.att[name]);
       }
     }
-    fatherElement.appendChild(this.minValue);    
-    fatherElement.appendChild(this.input);
-    fatherElement.appendChild(this.maxValue);
+    
+    fatherElement.appendChild(this.sliderContainer);
+    this.sliderContainer.appendChild(this.minValue);    
+    this.sliderContainer.appendChild(this.input);
+    this.sliderContainer.appendChild(this.maxValue);
     fatherElement.appendChild(this.output);
 
     this.CSSstyle()
@@ -94,4 +98,120 @@ for (var n = 0; n < inputsRy.length; n++) {
       updateCSS();
     }, false)
   }(n));
+}
+
+var calculateBtn = document.getElementById("calculateBtn");
+
+function calculateMortgage(){
+    var yearsOfMortgage = i.att.value;
+    var interestRate = i2.att.value;
+    var loanAmount = document.getElementById("loan-amount").value;
+    var annualTax = document.getElementById("annual-tax").value;
+    var annualInsurance = document.getElementById("annual-insurance").value;
+
+    if(loanAmount == ""){
+        document.getElementById("loan-amount").style.borderColor = "#da3535";
+        document.getElementById("loanAmountErrorMessage").style.display = "block";
+        document.getElementById("loanAmountErrorMessage").style.color = "#da3535";
+        document.getElementById("loanAmountErrorMessage").style.fontSize = "12px";
+        document.getElementById("loanAmountErrorMessage").style.paddingTop = "3px";
+        document.getElementById("loanAmountErrorMessage").textContent = "Loan Amount is mandatory";
+    }
+    else{
+        document.getElementById("loan-amount").style.borderColor = "#000";
+        document.getElementById("loanAmountErrorMessage").textContent = "";
+    }
+
+    if(annualTax == ""){
+        document.getElementById("annual-tax").style.borderColor = "#da3535";
+        document.getElementById("annualTaxErrorMessage").style.display = "block";
+        document.getElementById("annualTaxErrorMessage").style.color = "#da3535";
+        document.getElementById("annualTaxErrorMessage").style.fontSize = "12px";
+        document.getElementById("annualTaxErrorMessage").style.paddingTop = "3px";
+        document.getElementById("annualTaxErrorMessage").textContent = "Annual Tax is mandatory";
+    }
+    else{
+        document.getElementById("annual-tax").style.borderColor = "#000";
+        document.getElementById("annualTaxErrorMessage").textContent = "";
+    }
+
+    if(annualInsurance == ""){
+        document.getElementById("annual-insurance").style.borderColor = "#da3535";
+        document.getElementById("annualInsuranceErrorMessage").style.display = "block";
+        document.getElementById("annualInsuranceErrorMessage").style.color = "#da3535";
+        document.getElementById("annualInsuranceErrorMessage").style.fontSize = "12px";
+        document.getElementById("annualInsuranceErrorMessage").style.paddingTop = "3px";
+        document.getElementById("annualInsuranceErrorMessage").textContent = "Annual Insurance is mandatory";
+    }
+    else{
+        document.getElementById("annual-insurance").style.borderColor = "#000";
+        document.getElementById("annualInsuranceErrorMessage").textContent = "";
+    }
+
+    /*console.log(loanAmount);
+    console.log(annualTax);
+    console.log(annualInsurance);
+    console.log(yearsOfMortgage);
+    console.log(interestRate);*/
+
+    var principleAndInterests = ((interestRate / 100) / 12)* loanAmount / (1-Math.pow((1 + ((interestRate / 100)/12)), -yearsOfMortgage*12));
+    var tax = annualTax / 12;
+    var insurance = annualInsurance / 12;
+    var monthlyPayment = principleAndInterests + tax + insurance;
+
+    console.log(principleAndInterests);
+    console.log(tax);
+    console.log(insurance);
+    console.log(monthlyPayment);
+
+    var interestValue = document.getElementById('interest-value').textContent;
+    document.getElementById('interest-value').style.opacity = 1;
+    document.getElementById('interest-value').textContent = "$ " + principleAndInterests.toFixed(2);
+
+    var taxValue = document.getElementById('tax-value');
+    document.getElementById('tax-value').style.opacity = 1;
+    document.getElementById('tax-value').textContent = "$ " + tax.toFixed(2);
+
+    var insuranceValue = document.getElementById('insurance-value');
+    document.getElementById('insurance-value').style.opacity = 1;
+    document.getElementById('insurance-value').textContent = "$ " + insurance.toFixed(2);
+
+    var totalValue = document.getElementById('total-value');
+    document.getElementById('total-value').style.height = "25px";
+    document.getElementById('total-value').style.opacity = 1;
+    document.getElementById('total-value').textContent = "$ " + monthlyPayment.toFixed(2);
+
+    if(loanAmount != "" && annualTax != "" && annualInsurance != ""){
+        document.getElementById("calculateBtn").textContent = "RECALCULATE";
+    } 
+
+    function showResults(x) {
+        if (x.matches) { // If media query matches
+            /*document.getElementsByClassName("container")[0].style.flexDirection = "column";
+            document.getElementsByClassName("calculator")[0].style.marginBottom = "0px";*/
+            document.getElementsByClassName("results")[0].style.display = "block";
+            document.getElementsByClassName("results")[0].style.marginTop = "0px";
+            document.getElementsByClassName("results")[0].style.marginLeft = "70px";
+            document.getElementsByClassName("results")[0].style.width = "470px";
+        }
+    }
+    
+    var x = window.matchMedia("(max-width: 840px)");
+    showResults(x); // Call listener function at run time
+    x.addListener(showResults); // Attach listener function on state changes
+}
+
+function hideLoanAmountErrorMessage(){
+    document.getElementById("loan-amount").style.borderColor = "#000";
+    document.getElementById("loanAmountErrorMessage").style.display = "none";
+}
+
+function hideAnnualTaxErrorMessage(){
+    document.getElementById("annual-tax").style.borderColor = "#000";
+    document.getElementById("annualTaxErrorMessage").style.display = "none";
+}
+
+function hideAnnualInsuranceErrorMessage(){
+    document.getElementById("annual-insurance").style.borderColor = "#000";
+    document.getElementById("annualInsuranceErrorMessage").style.display = "none";
 }
