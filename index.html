@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8" name="viewport" content="width=device-width" />
+        <meta charset="utf-8" name="viewport" content="width=device-width; initial-scale=1.0;"" />
         <link href="css/styles.css" rel="stylesheet" type="text/css">
         <title>Mortgage Calculator</title>
     </head>
@@ -31,7 +31,7 @@
                             <span>Loan Amount</span>
                             <br>
                             <span class="input-currency">
-                                <input type="number" id="loan-amount" name="loan-amount" required="required" oninput="hideLoanAmountErrorMessage()" />
+                                <input type="number" id="loan-amount" name="loan-amount" required="required" />
                                 <span id="loanAmountErrorMessage"></span>
                             </span>
                         </div>
@@ -40,7 +40,7 @@
                                 <span>Annual Tax</span>
                                 <br>
                                 <span class="input-currency">
-                                    <input type="number" id="annual-tax" name="annual-tax" required="required" oninput="hideAnnualTaxErrorMessage()" />
+                                    <input type="number" id="annual-tax" name="annual-tax" required="required" />
                                     <span id="annualTaxErrorMessage"></span>
                                 </span>
                             </div>
@@ -48,13 +48,13 @@
                                 <span>Annual Insurance</span>
                                 <br>
                                 <span class="input-currency">
-                                    <input type="number" id="annual-insurance" name="annual-insurance" required="required" oninput="hideAnnualInsuranceErrorMessage()" />
+                                    <input type="number" id="annual-insurance" name="annual-insurance" required="required" />
                                     <span id="annualInsuranceErrorMessage"></span>
                                 </span>
                             </div>
                         </div>
                         <div class="calculate">
-                            <button id="calculateBtn" onclick="calculateMortgage('results')">Calculate</button>
+                            <button id="calculateBtn">Calculate</button>
                         </div>
                     </div>
                 </div>

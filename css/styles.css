@@ -39,6 +39,7 @@ body{
     text-align: center;
     color: #ffffff;
     text-transform: uppercase;
+    border: none;
 }
 
 .calculator{

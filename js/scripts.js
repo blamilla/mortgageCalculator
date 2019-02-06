@@ -192,7 +192,7 @@ let calculateBtn = document.getElementById('calculateBtn');
  * Function to calculate the mortgage values.
  * Receives a parameter which is used to create the transition effect on the mobile devices.
 */
-const calculateMortgage = function calculateMortgage(results) {
+calculateBtn.onclick = function calculateMortgage(results) {
     /**
      * A variable called 'yearsOfMortgage' for saving the Years of Mortgage selected value.
      * @let yearsOfMortgage
@@ -303,13 +303,13 @@ const calculateMortgage = function calculateMortgage(results) {
     */
     const showResultsPanel = function showResults(x) {
         if (x.matches) {
-            document.getElementsByClassName('results')[0].className = "showResultsPanel";
+            document.getElementById('results').className = "showResultsPanel";
             
             /**
              * A variable called 'target' for saving the results element.
              * @let target
             */
-            let target = document.getElementById(results);
+            let target = document.getElementById('results');
             target.style.height =  target.children[0].clientHeight + 'px';                    
         }
     }
@@ -323,29 +323,47 @@ const calculateMortgage = function calculateMortgage(results) {
     x.addListener(showResultsPanel);
 }
 
+/**
+ * A variable called 'loanAmountInput' for saving the input element with id = 'loan-amount'.
+ * @let loanAmountInput
+*/
+let loanAmountInput = document.getElementById('loan-amount');
+
 /** @function hideLoanAmountErrorMessage
  * Function to hide the error message below the loan amount field.
  * It also changes the border to its original color.
 */
-const hideLoanAmountErrorMessage = function hideLoanAmountErrorMessage() {
+loanAmountInput.oninput = function hideLoanAmountErrorMessage() {
     document.getElementById('loan-amount').style.borderColor = '#000';
     document.getElementById('loanAmountErrorMessage').style.display = 'none';
 }
+
+/**
+ * A variable called 'annualTaxInput' for saving the input element with id = 'annual-tax'.
+ * @let annualTaxInput
+*/
+let annualTaxInput = document.getElementById('annual-tax');
 
 /** @function hideAnnualTaxErrorMessage
  * Function to hide the error message below the annual tax field.
  * It also changes the border to its original color.
 */
-const hideAnnualTaxErrorMessage = function hideAnnualTaxErrorMessage() {
+annualTaxInput.oninput = function hideAnnualTaxErrorMessage() {
     document.getElementById('annual-tax').style.borderColor = '#000';
     document.getElementById('annualTaxErrorMessage').style.display = 'none';
 }
+
+/**
+ * A variable called 'annualInsuranceInput' for saving the input element with id = 'annual-insurance'.
+ * @let annualInsuranceInput
+*/
+let annualInsuranceInput = document.getElementById('annual-insurance');
 
 /** @function hideAnnualInsuranceErrorMessage
  * Function to hide the error message below the annual insurance field.
  * It also changes the border to its original color.
 */
-const hideAnnualInsuranceErrorMessage = function hideAnnualInsuranceErrorMessage() {
+annualInsuranceInput.oninput = function hideAnnualInsuranceErrorMessage() {
     document.getElementById('annual-insurance').style.borderColor = '#000';
     document.getElementById('annualInsuranceErrorMessage').style.display = 'none';
 }
