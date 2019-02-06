@@ -6,33 +6,39 @@
     src: url('HelveticaNeueBold.ttf') format('truetype');
 }
 
-body{
-    font-family: HelveticaNeue, sans-serif;
-}
-
-.page{
-    margin: 0;
-}
-
-.header {
-    padding: 10px 50px 0 30px;
-}
-
-.header span{
-    font-size: 22px;
-    line-height: 1.36;
-    text-align: left;
-    color: #005175;
-}
-
-.header hr{
-    margin-top: 15px;
-    background-color: #cacaca;
-    width: 820px;
-}
-
-.container{
+.annual-amounts{
+    margin-top: 20px;
     display: flex;
+}
+
+.annual-insurance{
+    width: 50%;
+}
+
+.annual-tax{
+    width: 50%;
+    margin-right: 15px;
+}
+
+body{
+    font-family: Helvetica, sans-serif;
+}
+
+.calculate{
+    margin-top: 20px;
+}
+
+.calculate button{
+    width: 100%;
+    height: 45px;
+    border-radius: 4px;
+    background-color: #0077c0;
+    cursor: pointer;
+    font-size: 16px;
+    letter-spacing: 0.3px;
+    text-align: center;
+    color: #ffffff;
+    text-transform: uppercase;
 }
 
 .calculator{
@@ -63,6 +69,13 @@ body{
     padding-top: 35.5px;
 }
 
+.calculator__content__body .emptyFieldMessage{
+    display: block;
+    color: #da3535;
+    font-size: 12px;
+    padding-top: 3px;
+}
+
 .calculator__content__body span{
     font-family: HelveticaNeue-Bold;
     font-size: 14px;
@@ -72,49 +85,60 @@ body{
     color: #3e3d3f;
 }
 
-.rangeSlider {
-    width: 100%;
-    display: flex;
-    margin: 11px auto;
-    color:#aaa;
-    position:relative;
-}
-
-.sliderContainer{
-    width: 100%;
-    line-height: 22.5px;
-}
-
-.minValue{
-    display: inline-block;
-    font-size: 16px;
-    letter-spacing: 0.3px;
-    text-align: left;
-    color: #3e3d3f;
-    margin: 12.5px 20px 0 0;
-    width: 10px;
-}
-
-.maxValue{
-    display: inline-block;
-    font-size: 16px;
-    letter-spacing: 0.3px;
-    text-align: left;
-    color: #3e3d3f;
-    margin: 12.5px 15px 0 5px;
-}
-  
-.output {
-    width: 60px;
+.calculator__content__body input[type=number]{
     height: 45px;
-    text-align: center;
-    line-height: 45px;
-    border: solid 1px #cacaca;
     border-radius: 4px;
+    /*box-shadow: 0 0 4px 0 rgba(62, 61, 63, 0.62);*/
+    width: 175px;
+    margin-top: 5px;
+    border: 1px solid #a6a6a6;
     font-size: 16px;
     letter-spacing: 0.3px;
-    text-align: center;
+    text-align: left;
     color: #3e3d3f;
+    text-indent: 40px;
+    padding-right: 10px;
+}
+
+.calculator__content__body input[type=number]:focus{
+    box-shadow: 0 0 4px 0 rgba(62, 61, 63, 0.62);
+    border: 1px solid #3e3d3f;
+}
+
+.calculator__content__body .input-currency {
+    position: relative;
+}
+
+.calculator__content__body .input-currency:before {
+    position: absolute;
+    top: -1.5px;
+    left: 25px;
+    content:"$";
+    font-size: 16px;
+    letter-spacing: 0.3px;
+    text-align: left;
+    color: #3e3d3f;
+}
+
+.container{
+    display: flex;
+}
+
+.header {
+    padding: 10px 50px 0 30px;
+}
+
+.header span{
+    font-size: 22px;
+    line-height: 1.36;
+    text-align: left;
+    color: #005175;
+}
+
+.header hr{
+    margin-top: 15px;
+    background-color: #cacaca;
+    width: 820px;
 }
 
 input[type='range'] {
@@ -187,6 +211,10 @@ input[type=range]::-ms-fill-upper {
   background-color: #d8d8d8;
 }
 
+.input-currency.left:before {
+    left: 5px;
+}
+
 .loan-amount{
     margin-top: 20px;
 }
@@ -198,78 +226,57 @@ input[type=range]::-ms-fill-upper {
     text-indent: 40px;
 }
 
-.annual-amounts{
-    margin-top: 20px;
-    display: flex;
+#loanAmountErrorMessage, #annualTaxErrorMessage, #annualInsuranceErrorMessage{
+    display: none;
 }
 
-.annual-tax{
-    width: 50%;
-    margin-right: 15px;
-}
-
-.annual-insurance{
-    width: 50%;
-}
-
-.calculator__content__body input[type=number]{
-    height: 45px;
-    border-radius: 4px;
-    /*box-shadow: 0 0 4px 0 rgba(62, 61, 63, 0.62);*/
-    width: 175px;
-    margin-top: 5px;
-    border: 1px solid #a6a6a6;
+.minValue{
+    display: inline-block;
     font-size: 16px;
     letter-spacing: 0.3px;
     text-align: left;
     color: #3e3d3f;
-    text-indent: 40px;
-    padding-right: 10px;
+    margin: 12.5px 20px 0 0;
+    width: 10px;
 }
 
-.calculator__content__body input[type=number]:focus{
-    box-shadow: 0 0 4px 0 rgba(62, 61, 63, 0.62);
-    border: 1px solid #3e3d3f;
-}
-
-.calculator__content__body .input-currency {
-    position: relative;
-}
-
-.calculator__content__body .input-currency input[type=number] {
-    /*padding-left: 40px;
-    padding-right: 10px;*/
-}
-
-.calculator__content__body .input-currency:before {
-    position: absolute;
-    top: -1.5px;
-    left: 25px;
-    content:"$";
+.maxValue{
+    display: inline-block;
     font-size: 16px;
     letter-spacing: 0.3px;
     text-align: left;
     color: #3e3d3f;
+    margin: 12.5px 15px 0 5px;
 }
-.input-currency.left:before {
-    left: 5px;
-}
-
-.calculate{
-    margin-top: 20px;
-}
-
-.calculate button{
-    width: 100%;
+  
+.output {
+    width: 60px;
     height: 45px;
+    text-align: center;
+    line-height: 45px;
+    border: solid 1px #cacaca;
     border-radius: 4px;
-    background-color: #0077c0;
-    cursor: pointer;
     font-size: 16px;
     letter-spacing: 0.3px;
     text-align: center;
-    color: #ffffff;
-    text-transform: uppercase;
+    color: #3e3d3f;
+}
+
+.page{
+    margin: 0;
+}
+
+.rangeSlider {
+    width: 100%;
+    display: flex;
+    margin: 11px auto;
+    color:#aaa;
+    position:relative;
+}
+
+.sliderContainer{
+    width: 100%;
+    line-height: 22.5px;
 }
 
 .results{
@@ -277,6 +284,12 @@ input[type=range]::-ms-fill-upper {
     height: 475px;
     background-color: #eaf6fa;
     margin-top: 70px;
+}
+
+.results-amounts{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
 }
 
 .results-content{
@@ -290,22 +303,12 @@ input[type=range]::-ms-fill-upper {
     color: #3e3d3f;
 }
 
-.results-amounts{
-    margin-top: 30px;
-    display: flex;
-    flex-direction: column;
-}
-
-.results-amounts span{
-    font-size: 14px;
-    line-height: 2.14;
-    text-align: left;
+.results-amounts .insurance-value{
+    opacity: 0.2;
     color: #3e3d3f;
-}
-
-.results-amounts .row{
-    display: flex;
-    flex-direction: column;
+    font-size: 18px;
+    font-family: HelveticaNeue-Bold;
+    margin-bottom: 20px;
 }
 
 .results-amounts .interest-value{
@@ -316,6 +319,11 @@ input[type=range]::-ms-fill-upper {
     margin-bottom: 20px;
 }
 
+.results-amounts .row{
+    display: flex;
+    flex-direction: column;
+}
+
 .results-amounts .tax-value{
     opacity: 0.2;
     color: #3e3d3f;
@@ -324,12 +332,11 @@ input[type=range]::-ms-fill-upper {
     margin-bottom: 20px;
 }
 
-.results-amounts .insurance-value{
-    opacity: 0.2;
+.results-amounts span{
+    font-size: 14px;
+    line-height: 2.14;
+    text-align: left;
     color: #3e3d3f;
-    font-size: 18px;
-    font-family: HelveticaNeue-Bold;
-    margin-bottom: 20px;
 }
 
 .results-divider{
@@ -340,17 +347,28 @@ input[type=range]::-ms-fill-upper {
     opacity: 0.2;
 }
 
+.resultsValuesOpacity{
+    opacity: 1;
+}
+
+.showResultsPanel{
+    display: block;
+    margin: 0px 0px 0px 70px;
+    width: 470px;
+    background-color: #eaf6fa;
+    overflow: hidden;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    height: 0px;
+    padding-bottom: 45px;
+}
+
 .total-amounts{
     margin-top: 20px;
     display: flex;
     flex-direction: column;
-}
-
-.total-amounts span{
-    font-size: 18px;
-    line-height: 1.67;
-    text-align: left;
-    color: #3e3d3f;
 }
 
 .total-amounts .total-value{
@@ -362,14 +380,17 @@ input[type=range]::-ms-fill-upper {
     color: #3e3d3f;
 }
 
+.total-amounts span{
+    font-size: 18px;
+    line-height: 1.67;
+    text-align: left;
+    color: #3e3d3f;
+}
+
 #total-value{
     transition:height 0.5s ease-out;
     height:0;
     overflow:hidden;
-}
-
-#loanAmountErrorMessage, #annualTaxErrorMessage, #annualInsuranceErrorMessage{
-    display: none;
 }
 
 @media screen and (max-width: 320px) {
@@ -387,22 +408,34 @@ input[type=range]::-ms-fill-upper {
         margin-bottom: 0px;
     }
 
-    .container{
-        flex-direction: column;
-        margin-bottom: 0px;
+    .columnTitle{
+        width: 50%;
+        line-height: 25px;
     }
 
-    .results{
-        display: none;
-        height: auto;
+    .columnValue {
+        width: 50%;
+        text-align: right;
+    }
+
+    .container{
+        flex-direction: column;
     }
 
     .output{
         width: 19.23%;
     }
 
-    .results-amounts span{
-        font-size: 12px;
+    .results{
+        display: none;
+        overflow: hidden;
+        /*transition: height 0.5s ease-in 0s;*/
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+        height: 0px;
+        padding-bottom: 45px;
     }
 
     .results-amounts .columnValue span{
@@ -419,12 +452,21 @@ input[type=range]::-ms-fill-upper {
         margin-bottom: 10px;
     }
 
+    .results-amounts span{
+        font-size: 12px;
+    }
+
     .results-divider{
         display: none;
     }
 
     .total-amounts{
         margin-top: 5px;
+    }
+
+    .total-amounts .columnValue span{
+        font-size: 18px;
+        font-weight: bold;
     }
 
     .total-amounts .row{
@@ -437,20 +479,5 @@ input[type=range]::-ms-fill-upper {
 
     .total-amounts span{
         font-size: 12px;
-    }
-
-    .total-amounts .columnValue span{
-        font-size: 18px;
-        font-weight: bold;
-    }
-
-    .columnTitle{
-        width: 50%;
-        line-height: 25px;
-    }
-
-    .columnValue {
-        width: 50%;
-        text-align: right;
     }
 }
