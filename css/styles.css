@@ -142,6 +142,10 @@ body{
     width: 820px;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 input[type='range'] {
   display: inline-block;
   width: 75%;
@@ -460,7 +464,7 @@ input[type=range]::-ms-fill-upper {
     }
 
     .header hr{
-        width: 300px;
+        width: 298px;
     }
 
     .header span{
@@ -531,6 +535,432 @@ input[type=range]::-ms-fill-upper {
     }
 }
 
+@media screen and (max-width: 375px) {   
+    .calculate{
+        margin-bottom: 20px;
+    }   
+
+    .calculator{
+        margin: 20px 10px 0px 10px;
+        width: 355px;
+    }
+
+    .calculator .calculator__content{
+        padding: 0;
+        margin: 15px 20px 0px 20px;
+    }
+
+    .calculator .calculator__content hr {
+        margin-top: 5px;
+    }
+
+    .calculator .calculator__content__title span{
+        font-size: 12px;
+        line-height: 1.67;
+        letter-spacing: 0.2px;
+    }
+
+    .calculator .calculator__content .calculator__content__body{
+        padding: 0;
+        margin-top: 15px;
+    }
+
+    .calculator .calculator__content__body span{
+        font-size: 12px;
+        line-height: 1.67;
+        letter-spacing: 0.2px;
+    }
+
+    .calculator .calculator__content__body input[type=number] {
+        height: 40px;
+        text-indent: 30px;
+    }
+
+    .calculator .calculator__content__body .input-currency:before{
+        top: -5px;
+        left: 15px;
+        font-size: 14px;
+    }
+
+    .calculator .calculator__content__body .annual-amounts input{
+        width: 145px;
+        padding-right: 0px;
+    }
+
+    .calculator .calculator__content__body .annual-tax{
+        margin-right: 20px;
+    }
+
+    .header{
+        padding: 0;
+        margin: 23px 80px 10px 20px;
+    }
+
+    .header hr{
+        width: 353px;
+    }
+
+    .header span{
+        font-size: 20px;
+        line-height: 1.2;
+        letter-spacing: 0.5px;
+    }
+
+    input[type='range'] {
+        width: 200px;
+    }
+
+    #loan-amount{
+        padding: 0;
+        width: 313px;
+        text-indent: 30px;
+    }
+
+    .loan-amount {
+        margin-top: 22px;
+    }
+
+    .maxValue{
+        font-size: 14px;
+        margin: 0px 0px 0px 4.5px;
+    }
+
+    .minValue{
+        font-size: 14px;
+        margin: 0px 16px 0px 0px;
+    }
+
+    .output {
+        height: 40px;
+        margin: 0;
+        padding: 0;
+        line-height: 2.5;
+        margin-top: -15px;
+    }
+
+    .rangeSlider{
+        margin: 10px 0px 10px 0px;
+    }
+
+    #results{
+        margin: 0px 10px 122px 10px;
+        width: 355px;
+    }
+    
+    .results{
+        display: none;
+    }
+
+    .results .results-amounts .row{
+        margin-right: 0px;
+    }
+
+    .results-amounts {
+        margin-top: 28px;
+    }
+    
+    .results-content {
+        margin: 20px 20px 29px 20px;
+    }
+    
+    .sliderContainer{
+        line-height: 0;
+    }
+}
+
+@media screen and (max-width: 414px) {   
+    .calculate{
+        margin-bottom: 20px;
+    }   
+
+    .calculator{
+        margin: 20px 10px 0px 10px;
+        width: 394px;
+    }
+
+    .calculator .calculator__content{
+        padding: 0;
+        margin: 15px 20px 0px 20px;
+    }
+
+    .calculator .calculator__content hr {
+        margin-top: 5px;
+    }
+
+    .calculator .calculator__content__title span{
+        font-size: 14px;
+        line-height: 1.67;
+        letter-spacing: 0.2px;
+    }
+
+    .calculator .calculator__content .calculator__content__body{
+        padding: 0;
+        margin-top: 15px;
+    }
+
+    .calculator .calculator__content__body span{
+        font-size: 12px;
+        line-height: 1.67;
+        letter-spacing: 0.2px;
+    }
+
+    .calculator .calculator__content__body input[type=number] {
+        height: 40px;
+        text-indent: 30px;
+    }
+
+    .calculator .calculator__content__body .input-currency:before{
+        top: -5px;
+        left: 15px;
+        font-size: 14px;
+    }
+
+    .calculator .calculator__content__body .annual-amounts input{
+        width: 165px;
+        padding-right: 0px;
+    }
+
+    .calculator .calculator__content__body .annual-tax{
+        margin-right: 20px;
+    }
+
+    .header{
+        padding: 0;
+        margin: 23px 80px 10px 20px;
+    }
+
+    .header hr{
+        width: 392px;
+    }
+
+    .header span{
+        font-size: 20px;
+        line-height: 1.2;
+        letter-spacing: 0.5px;
+    }
+
+    input[type='range'] {
+        width: 230px;
+    }
+
+    #loan-amount{
+        padding: 0;
+        width: 352px;
+        text-indent: 30px;
+    }
+
+    .loan-amount {
+        margin-top: 22px;
+    }
+
+    .maxValue{
+        font-size: 14px;
+        margin: 0px 0px 0px 4.5px;
+    }
+
+    .minValue{
+        font-size: 14px;
+        margin: 0px 16px 0px 0px;
+    }
+
+    .output {
+        height: 40px;
+        margin: 0;
+        padding: 0;
+        line-height: 2.5;
+        margin-top: -15px;
+    }
+
+    .rangeSlider{
+        margin: 10px 0px 10px 0px;
+    }
+
+    #results{
+        margin: 0px 10px 122px 10px;
+        width: 394px;
+    }
+    
+    .results{
+        display: none;
+    }
+
+    .results .results-amounts .row{
+        margin-right: 0px;
+    }
+
+    .results-amounts {
+        margin-top: 28px;
+    }
+    
+    .results-content {
+        margin: 20px 20px 29px 20px;
+    }
+    
+    .sliderContainer{
+        line-height: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {   
+    .calculate{
+        margin-bottom: 20px;
+    }   
+
+    .calculate button{
+        font-size: 18px;
+    }
+
+    .calculator{
+        margin: 20px 10px 0px 10px;
+        width: 748px;
+    }
+
+    .calculator .calculator__content{
+        padding: 0;
+        margin: 15px 20px 0px 20px;
+    }
+
+    .calculator .calculator__content hr {
+        margin-top: 5px;
+    }
+
+    .calculator .calculator__content__title span{
+        font-size: 18px;
+        line-height: 1.67;
+        letter-spacing: 0.2px;
+    }
+
+    .calculator .calculator__content .calculator__content__body{
+        padding: 0;
+        margin-top: 15px;
+    }
+
+    .calculator .calculator__content__body span{
+        font-size: 16px;
+        line-height: 1.67;
+        letter-spacing: 0.2px;
+    }
+
+    .calculator .calculator__content__body input[type=number] {
+        height: 45px;
+        text-indent: 30px;
+    }
+
+    .calculator .calculator__content__body .input-currency:before{
+        top: -3px;
+        left: 15px;
+        font-size: 16px;
+    }
+
+    .calculator .calculator__content__body .annual-amounts input{
+        width: 342px;
+        padding-right: 0px;
+    }
+
+    .calculator .calculator__content__body .annual-tax{
+        margin-right: 20px;
+    }
+
+    .header{
+        padding: 0;
+        margin: 23px 80px 10px 20px;
+    }
+
+    .header hr{
+        width: 746px;
+    }
+
+    .header span{
+        font-size: 22px;
+        line-height: 1.2;
+        letter-spacing: 0.5px;
+    }
+
+    input[type='range'] {
+        width: 550px;
+    }
+
+    #loan-amount{
+        padding: 0;
+        width: 706px;
+        text-indent: 30px;
+    }
+
+    .loan-amount {
+        margin-top: 22px;
+    }
+
+    .maxValue{
+        font-size: 16px;
+        margin: 0px 0px 0px 4.5px;
+    }
+
+    .minValue{
+        font-size: 16px;
+        margin: 0px 16px 0px 0px;
+    }
+
+    .output {
+        height: 40px;
+        margin: 0;
+        padding: 0;
+        line-height: 2.5;
+        margin-top: -15px;
+        width: 10%;
+    }
+
+    .rangeSlider{
+        margin: 20px 0px 10px 0px;
+    }
+
+    #results{
+        margin: 0px 10px 122px 10px;
+        width: 748px;
+    }
+    
+    .results{
+        display: none;
+    }
+
+    .results .results-amounts .row{
+        margin-right: 0px;
+    }
+
+    .results-amounts {
+        margin-top: 28px;
+    }
+
+    .results-amounts .columnValue span{
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .results-content .results-amounts span {
+        font-size: 16px;
+    }
+
+    .results-content .total-amounts span {
+        font-size: 20px;
+    }
+    
+    .results-content {
+        margin: 20px 20px 29px 20px;
+    }
+
+    .results-content span{
+        font-size: 24px;
+    }
+    
+    .sliderContainer{
+        line-height: 0;
+    }
+
+    .total-amounts .columnValue span{
+        font-size: 20px;
+        font-weight: bold;
+    }
+}
+
 @media screen and (max-width: 840px) {
     .calculator{
         margin-bottom: 0px;
@@ -551,7 +981,7 @@ input[type=range]::-ms-fill-upper {
     }
 
     .output{
-        width: 19.23%;
+        /*width: 19.23%;*/
     }
 
     .results{
@@ -567,7 +997,7 @@ input[type=range]::-ms-fill-upper {
     }
 
     .results-amounts .columnValue span{
-        font-size: 14px;
+        /*font-size: 14px;*/
         font-weight: bold;
     }
 
@@ -581,7 +1011,7 @@ input[type=range]::-ms-fill-upper {
     }
 
     .results-amounts span{
-        font-size: 12px;
+        /*font-size: 12px;*/
     }
 
     .results-divider{
@@ -597,7 +1027,7 @@ input[type=range]::-ms-fill-upper {
     }
 
     .total-amounts .columnValue span{
-        font-size: 18px;
+        /*font-size: 18px;*/
         font-weight: bold;
     }
 
