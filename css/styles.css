@@ -398,13 +398,136 @@ input[type=range]::-ms-fill-upper {
     overflow:hidden;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 320px) {   
+    .calculate{
+        margin-bottom: 20px;
+    }   
+
     .calculator{
-        margin-bottom: 0px;
+        margin: 20px 10px 0px 10px;
+        width: 300px;
+    }
+
+    .calculator .calculator__content{
+        padding: 0;
+        margin: 15px 20px 0px 20px;
+    }
+
+    .calculator .calculator__content hr {
+        margin-top: 5px;
+    }
+
+    .calculator .calculator__content__title span{
+        font-size: 12px;
+        line-height: 1.67;
+        letter-spacing: 0.2px;
+    }
+
+    .calculator .calculator__content .calculator__content__body{
+        padding: 0;
+        margin-top: 15px;
+    }
+
+    .calculator .calculator__content__body span{
+        font-size: 12px;
+        line-height: 1.67;
+        letter-spacing: 0.2px;
+    }
+
+    .calculator .calculator__content__body input[type=number] {
+        height: 40px;
+        text-indent: 30px;
+    }
+
+    .calculator .calculator__content__body .input-currency:before{
+        top: -5px;
+        left: 15px;
+        font-size: 14px;
+    }
+
+    .calculator .calculator__content__body .annual-amounts input{
+        width: 120px;
+        padding-right: 0px;
+    }
+
+    .calculator .calculator__content__body .annual-tax{
+        margin-right: 20px;
+    }
+
+    .header{
+        padding: 0;
+        margin: 23px 80px 10px 20px;
+    }
+
+    .header hr{
+        width: 300px;
+    }
+
+    .header span{
+        font-size: 20px;
+        line-height: 1.2;
+        letter-spacing: 0.5px;
+    }
+
+    input[type='range'] {
+        width: 153.6px;
+    }
+
+    #loan-amount{
+        padding: 0;
+        width: 260px;
+        text-indent: 30px;
+    }
+
+    .loan-amount {
+        margin-top: 22px;
+    }
+
+    .maxValue{
+        font-size: 14px;
+        margin: 0px 0px 0px 4.5px;
+    }
+
+    .minValue{
+        font-size: 14px;
+        margin: 0px 16px 0px 0px;
+    }
+
+    .output {
+        height: 40px;
+        margin: 0;
+        padding: 0;
+        line-height: 2.5;
+        margin-top: -15px;
+    }
+
+    .rangeSlider{
+        margin: 10px 0px 10px 0px;
+    }
+
+    #results{
+        margin: 0px 10px 122px 10px;
+        width: 300px;
     }
     
     .results{
         display: none;
+    }
+
+    .results .results-amounts .row{
+        margin-right: 0px;
+    }
+
+    .results-amounts {
+        margin-top: 28px;
+    }
+    
+    .results-content {
+        margin: 20px 20px 29px 20px;
+    }
+    
+    .sliderContainer{
+        line-height: 0;
     }
 }
 
@@ -452,7 +575,7 @@ input[type=range]::-ms-fill-upper {
         display: flex;
         flex-direction: row;
         border-bottom: 1px solid #b2b2b2;
-        margin-right: 40px;
+        /*margin-right: 40px;*/
         padding-bottom: 10px;
         margin-bottom: 10px;
     }
@@ -463,6 +586,10 @@ input[type=range]::-ms-fill-upper {
 
     .results-divider{
         display: none;
+    }
+
+    .showResultsPanel{
+        padding-bottom: 25px;
     }
 
     .total-amounts{
@@ -477,7 +604,7 @@ input[type=range]::-ms-fill-upper {
     .total-amounts .row{
         display: flex;
         flex-direction: row;
-        margin-right: 40px;
+        /*margin-right: 40px;*/
         padding-bottom: 10px;
         margin-bottom: 10px;
     }

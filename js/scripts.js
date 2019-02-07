@@ -295,6 +295,7 @@ calculateBtn.onclick = function calculateMortgage(results) {
     // Replaces the CALCULATE text with RECALCULATE once the values are calculated.
     if (loanAmount != '' && annualTax != '' && annualInsurance != '') {
         document.getElementById('calculateBtn').textContent = 'RECALCULATE';
+        document.getElementById('results').style.display = "block";
     } 
 
     /** @function showResults
@@ -303,7 +304,16 @@ calculateBtn.onclick = function calculateMortgage(results) {
     */
     const showResultsPanel = function showResults(x) {
         if (x.matches) {
-            document.getElementById('results').className = "showResultsPanel";
+            document.getElementById('loanAmountErrorMessage').textContent = "Mandatory field";
+            document.getElementById('annualTaxErrorMessage').textContent = "Mandatory field";
+            document.getElementById('annualInsuranceErrorMessage').textContent = "Mandatory field";
+
+            if (loanAmount == '' || annualTax == '' || annualInsurance == '') {
+                document.getElementById('results').style.display = "none";
+            }
+            else {
+                document.getElementById('results').className = "showResultsPanel";
+            }
             
             /**
              * A variable called 'target' for saving the results element.
