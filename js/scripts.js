@@ -321,17 +321,30 @@ calculateBtn.onclick = function calculateMortgage(results) {
              * @let target
             */
             let target = document.getElementById('results');
+            console.log(target);
             target.style.height =  target.children[0].clientHeight + 'px';                    
         }
     }
     
-    let x = window.matchMedia('(max-width: 840px)');
+    let v = window.matchMedia('(max-width: 320px)');
+    let w = window.matchMedia('(max-width: 375px)');
+    let x = window.matchMedia('(max-width: 414px)');
+    let y = window.matchMedia('(max-width: 768px)');
+    let z = window.matchMedia('(max-width: 834px)');
 
     // Call listener function at run time
-    showResultsPanel(x); 
+    showResultsPanel(v);
+    showResultsPanel(w); 
+    showResultsPanel(x);
+    showResultsPanel(y);
+    showResultsPanel(z);
 
     // Attach listener function on state changes
+    v.addListener(showResultsPanel);
+    w.addListener(showResultsPanel);
     x.addListener(showResultsPanel);
+    y.addListener(showResultsPanel);
+    z.addListener(showResultsPanel);
 }
 
 /**
