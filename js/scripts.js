@@ -322,10 +322,7 @@ calculateBtn.onclick = function calculateMortgage(results) {
 
             if (loanAmount == '' || annualTax == '' || annualInsurance == '') {
                 document.getElementById('results').style.display = 'none';
-            }
-            /*else {
-                document.getElementById('results').className = 'showResultsPanel';
-            }*/
+            }            
             
             /**
              * A variable called 'target' for saving the results element.
