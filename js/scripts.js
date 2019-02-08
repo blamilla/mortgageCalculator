@@ -296,6 +296,17 @@ calculateBtn.onclick = function calculateMortgage(results) {
     if (loanAmount != '' && annualTax != '' && annualInsurance != '') {
         document.getElementById('calculateBtn').textContent = 'RECALCULATE';
         document.getElementById('results').style.display = 'block';
+        
+        if (window.matchMedia('(max-width: 360px)').matches) {
+            document.getElementById('results').style.height = '250px';
+        }        
+        else if (window.matchMedia('(max-width: 768px)').matches) {
+            document.getElementById('results').style.height = '300px';
+        } 
+        else {
+            document.getElementById('results').style.height = '475px';
+        }
+
         window.scrollTo(0,document.querySelector('.results').scrollHeight);
     } 
 
@@ -312,17 +323,16 @@ calculateBtn.onclick = function calculateMortgage(results) {
             if (loanAmount == '' || annualTax == '' || annualInsurance == '') {
                 document.getElementById('results').style.display = 'none';
             }
-            else {
+            /*else {
                 document.getElementById('results').className = 'showResultsPanel';
-            }
+            }*/
             
             /**
              * A variable called 'target' for saving the results element.
              * @let target
             */
-            let target = document.getElementById('results');
-            console.log(target);
-            target.style.height =  target.children[0].clientHeight + 'px';                    
+            /*let target = document.getElementById('results');
+            target.style.height =  target.children[0].clientHeight + 'px'; */
         }
     }
     
