@@ -34,7 +34,8 @@ body{
     border-radius: 4px;
     background-color: #0077c0;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 14px;
+    font-weight: bold;
     letter-spacing: 0.3px;
     text-align: center;
     color: #ffffff;
@@ -43,54 +44,54 @@ body{
 }
 
 .calculator{
-    margin: 25px 0px 97px 70px;
-    /*height: 522px;*/
-    width: 470px;
+    margin: 20px 0px 0px 0px;
+    /*width: 100%;*/
     border-radius: 4px;
     box-shadow: 0 2px 6px 2px rgba(0, 0, 0, 0.1);
 }
 
 .calculator .calculator__content{
-    padding: 34px 40px 40px 40px;
+    /*width: 100%;*/
+    padding: 15px 0px 20px 0px;
+    margin: 0px 20px 0px 20px;
 }
 
-.calculator__content span{
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.3px;
+.calculator .calculator__content hr{
+    margin-top: 10.5px;
+}
+
+.calculator .calculator__content span{
+    font-size: 12px;
+    line-height: 1.67;
+    letter-spacing: 0.2px;
     text-align: left;
     color: #3e3d3f;
 }
 
-.calculator__content hr{
-    margin-top: 10.5px;
+.calculator .calculator__content .calculator__content__body{
+    margin-top: 15px;
 }
 
-.calculator__content__body{
-    padding-top: 35.5px;
+.calculator__content .calculator__content__body span{
+    font-size: 12px;
+    line-height: 1.67;
+    letter-spacing: 0.2px;
+    text-align: left;
+    color: #3e3d3f;
+    font-weight: bold;
 }
 
-.calculator__content__body .emptyFieldMessage{
+.calculator__content .calculator__content__body .emptyFieldMessage{
     display: block;
     color: #da3535;
     font-size: 12px;
     padding-top: 3px;
 }
 
-.calculator__content__body span{
-    font-family: HelveticaNeue-Bold;
-    font-size: 14px;
-    line-height: 1.21;
-    letter-spacing: 0.2px;
-    text-align: left;
-    color: #3e3d3f;
-}
-
 .calculator__content__body input[type=number]{
     height: 45px;
     border-radius: 4px;
-    /*box-shadow: 0 0 4px 0 rgba(62, 61, 63, 0.62);*/
-    width: 175px;
+    width: 100%;
     margin-top: 5px;
     border: 1px solid #a6a6a6;
     font-size: 16px;
@@ -98,7 +99,6 @@ body{
     text-align: left;
     color: #3e3d3f;
     text-indent: 40px;
-    padding-right: 10px;
 }
 
 .calculator__content__body input[type=number]:focus{
@@ -112,7 +112,7 @@ body{
 
 .calculator__content__body .input-currency:before {
     position: absolute;
-    top: -1.5px;
+    top: -7px;
     left: 25px;
     content:"$";
     font-size: 16px;
@@ -122,11 +122,11 @@ body{
 }
 
 .container{
-    display: flex;
+    margin: 0px 10px 0px 10px;
 }
 
 .header {
-    padding: 10px 50px 0 30px;
+    margin: 23px 0px 10px 20px;
 }
 
 .header span{
@@ -137,101 +137,97 @@ body{
 }
 
 .header hr{
-    margin-top: 15px;
     background-color: #cacaca;
-    width: 820px;
+    width: 100%;
 }
 
 html{
   scroll-behavior: smooth;
 }
 
-input[type='range'] {
-  display: inline-block;
-  width: 75%;
+input[type='range']{
+    width: 50%;
 }
 
 input[type='range']:focus {
-  outline: none;
-}
-
-input[type='range'],
-input[type='range']::-webkit-slider-runnable-track,
-input[type='range']::-webkit-slider-thumb {
-  	-webkit-appearance: none;
-  	border-radius: 10px;
-	-moz-box-shadow: 2px 2px 3px #666;
-	outline: 0;
-	-webkit-appearance: none;
-}
-
-input[type=range]::-webkit-slider-thumb {
-  background-color: #ffffff;
-  width: 20px;
-  height: 20px;
-  border: 3px solid #ffffff;
-  box-shadow: 0 1px 2px 0 #000;
-  border-radius: 50%;
-  margin-top: -6px;
-}
-
-input[type=range]::-moz-range-thumb {
-  background-color: #ffffff;
-  width: 15px;
-  height: 15px;
-  border: 3px solid #ffffff;
-  box-shadow: 0 1px 2px 0 #000;
-  border-radius: 50%;
-}
-
-input[type=range]::-ms-thumb {
-  background-color: #ffffff;
-  width: 20px;
-  height: 20px;
-  border: 3px solid #ffffff;
-  box-shadow: 0 1px 2px 0 #000;
-  border-radius: 50%;
-}
-
-input[type=range]::-webkit-slider-runnable-track {
-  background-color: #ffffff;
-  height: 8px;
-}
-
-input[type=range]:focus::-webkit-slider-runnable-track {
-  outline: none;
-}
-
-input[type=range]::-moz-range-track {
-  background-color: #777;
-  height: 8px;
-}
-
-input[type=range]::-ms-track {
-  background-color: #777;
-  height: 8px;
-}
-
-input[type=range]::-ms-fill-lower {
-  background-color: #1091cc;
-}
-
-input[type=range]::-ms-fill-upper {
-  background-color: #d8d8d8;
-}
-
-.input-currency.left:before {
-    left: 5px;
-}
+    outline: none;
+  }
+  
+  input[type='range'],
+  input[type='range']::-webkit-slider-runnable-track,
+  input[type='range']::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        border-radius: 10px;
+      -moz-box-shadow: 2px 2px 3px #666;
+      outline: 0;
+      -webkit-appearance: none;
+  }
+  
+  input[type=range]::-webkit-slider-thumb {
+    background-color: #ffffff;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #ffffff;
+    box-shadow: 0 1px 2px 0 #000;
+    border-radius: 50%;
+    margin-top: -6px;
+  }
+  
+  input[type=range]::-moz-range-thumb {
+    background-color: #ffffff;
+    width: 15px;
+    height: 15px;
+    border: 3px solid #ffffff;
+    box-shadow: 0 1px 2px 0 #000;
+    border-radius: 50%;
+  }
+  
+  input[type=range]::-ms-thumb {
+    background-color: #ffffff;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #ffffff;
+    box-shadow: 0 1px 2px 0 #000;
+    border-radius: 50%;
+  }
+  
+  input[type=range]::-webkit-slider-runnable-track {
+    background-color: #ffffff;
+    height: 8px;
+  }
+  
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    outline: none;
+  }
+  
+  input[type=range]::-moz-range-track {
+    background-color: #777;
+    height: 8px;
+  }
+  
+  input[type=range]::-ms-track {
+    background-color: #777;
+    height: 8px;
+  }
+  
+  input[type=range]::-ms-fill-lower {
+    background-color: #1091cc;
+  }
+  
+  input[type=range]::-ms-fill-upper {
+    background-color: #d8d8d8;
+  }
+  
+  .input-currency.left:before {
+      left: 5px;
+  }
 
 .loan-amount{
     margin-top: 20px;
 }
 
 #loan-amount{
-    width: 97%;
-    padding-right: 10px;
-    padding-left: 0px;
+    width: 100%;
     text-indent: 40px;
 }
 
@@ -239,19 +235,19 @@ input[type=range]::-ms-fill-upper {
     display: none;
 }
 
-.minValue{
+  .minValue{
     display: inline-block;
-    font-size: 16px;
+    font-size: 14px;
     letter-spacing: 0.3px;
     text-align: left;
     color: #3e3d3f;
-    margin: 12.5px 20px 0 0;
+    margin: 0px 20px 0 0;
     width: 10px;
 }
 
 .maxValue{
     display: inline-block;
-    font-size: 16px;
+    font-size: 14px;
     letter-spacing: 0.3px;
     text-align: left;
     color: #3e3d3f;
@@ -259,73 +255,45 @@ input[type=range]::-ms-fill-upper {
 }
   
 .output {
-    width: 60px;
-    height: 45px;
+    width: 50px;
+    height: 40px;
     text-align: center;
-    line-height: 45px;
+    line-height: 40px;
     border: solid 1px #cacaca;
     border-radius: 4px;
-    font-size: 16px;
+    font-size: 14px;
     letter-spacing: 0.3px;
     text-align: center;
     color: #3e3d3f;
 }
 
-.page{
-    margin: 0;
-}
-
 .rangeSlider {
-    width: 100%;
     display: flex;
-    margin: 11px auto;
     color:#aaa;
-    position:relative;
 }
 
-.sliderContainer{
-    width: 100%;
-    line-height: 22.5px;
+.rate-of-interest .rangeSlider{
+    margin: 10px 0px 22px 0px;
 }
 
 .results{
-    width: 298px;
-    height: 475px;
+    width: 100%;
     background-color: #eaf6fa;
-    margin-top: 70px;
 }
 
 .results-amounts{
-    margin-top: 30px;
+    margin-top: 28px;
     display: flex;
     flex-direction: column;
 }
 
-.results-content{
-    margin: 36px 0px 0px 40px; 
+.results-amounts .columnTitle span{
+    font-size: 12px;
 }
 
-.results-content span{
-    font-size: 22px;
-    line-height: 1.36;
-    text-align: left;
-    color: #3e3d3f;
-}
-
-.results-amounts .insurance-value{
-    opacity: 0.2;
-    color: #3e3d3f;
-    font-size: 18px;
-    font-family: HelveticaNeue-Bold;
-    margin-bottom: 20px;
-}
-
-.results-amounts .interest-value{
-    opacity: 0.2;
-    color: #3e3d3f;
-    font-size: 18px;
-    font-family: HelveticaNeue-Bold;
-    margin-bottom: 20px;
+.results-amounts .columnValue span{
+    font-size: 14px;
+    font-weight: bold;
 }
 
 .results-amounts .row{
@@ -333,17 +301,20 @@ input[type=range]::-ms-fill-upper {
     flex-direction: column;
 }
 
-.results-amounts .tax-value{
-    opacity: 0.2;
-    color: #3e3d3f;
-    font-size: 18px;
-    font-family: HelveticaNeue-Bold;
-    margin-bottom: 20px;
-}
-
 .results-amounts span{
     font-size: 14px;
     line-height: 2.14;
+    text-align: left;
+    color: #3e3d3f;
+}
+
+.results-content{
+    margin: 20px; 
+}
+
+.results-content span{
+    font-size: 20px;
+    line-height: 1.5;
     text-align: left;
     color: #3e3d3f;
 }
@@ -358,6 +329,10 @@ input[type=range]::-ms-fill-upper {
 
 .resultsValuesOpacity{
     opacity: 1;
+}
+
+.sliderContainer{
+    width: 100%;
 }
 
 .showResultsPanel{
@@ -380,20 +355,13 @@ input[type=range]::-ms-fill-upper {
     flex-direction: column;
 }
 
-.total-amounts .total-value{
-    opacity: 0.2;
-    font-size: 22px;
-    font-family: HelveticaNeue-Bold;
-    line-height: 1.36;
-    text-align: left;
-    color: #3e3d3f;
+.total-amounts .columnTitle span{
+    font-size: 12px;
 }
 
-.total-amounts span{
+.total-amounts .columnValue span{
     font-size: 18px;
-    line-height: 1.67;
-    text-align: left;
-    color: #3e3d3f;
+    font-weight: bold;
 }
 
 #total-value{
@@ -402,1716 +370,415 @@ input[type=range]::-ms-fill-upper {
     overflow:hidden;
 }
 
-/* iPhone 5/SE - Portrait Mode */
-@media only screen 
-    and (min-device-width: 320px) 
-    and (max-device-width: 568px)
-    and (-webkit-min-device-pixel-ratio: 2)
-    and (orientation: portrait) {
-    .calculate{
-        margin-bottom: 20px;
-    }   
-
-    .calculator{
-        margin: 20px 10px 0px 10px;
-        width: 300px;
-    }
-
-    .calculator .calculator__content{
-        padding: 0;
-        margin: 15px 20px 0px 20px;
-    }
-
-    .calculator .calculator__content hr {
-        margin-top: 5px;
-    }
-
-    .calculator .calculator__content__title span{
-        font-size: 12px;
-        line-height: 1.67;
-        letter-spacing: 0.2px;
-    }
-
-    .calculator .calculator__content .calculator__content__body{
-        padding: 0;
-        margin-top: 15px;
-    }
-
-    .calculator .calculator__content__body span{
-        font-size: 12px;
-        line-height: 1.67;
-        letter-spacing: 0.2px;
-    }
-
-    .calculator .calculator__content__body input[type=number] {
-        height: 40px;
-        text-indent: 30px;
-    }
-
-    .calculator .calculator__content__body .input-currency:before{
-        top: -5px;
-        left: 15px;
-        font-size: 14px;
-    }
-
-    .calculator .calculator__content__body .annual-amounts input{
-        width: 118px;
-        padding-right: 0px;
-    }
-
-    .calculator .calculator__content__body .annual-tax{
-        margin-right: 20px;
-    }
-
-    .header{
-        padding: 0;
-        margin: 23px 80px 10px 20px;
-    }
-
-    .header hr{
-        width: 298px;
-    }
-
-    .header span{
-        font-size: 20px;
-        line-height: 1.2;
-        letter-spacing: 0.5px;
-    }
-
-    input[type='range'] {
-        width: 153.6px;
-    }
-
-    #loan-amount{
-        padding: 0;
-        width: 258px;
-        text-indent: 30px;
-    }
-
-    .loan-amount {
-        margin-top: 22px;
-    }
-
-    .maxValue{
-        font-size: 14px;
-        margin: 0px 0px 0px 4.5px;
-    }
-
-    .minValue{
-        font-size: 14px;
-        margin: 0px 16px 0px 0px;
-    }
-
-    .output {
-        height: 40px;
-        margin: 0;
-        padding: 0;
-        line-height: 2.5;
-        margin-top: -15px;
-    }
-
-    .rangeSlider{
-        margin: 10px 0px 10px 0px;
-    }
-
-    #results{
-        margin: 0px 10px 122px 10px;
-        width: 300px;
-    }
-    
-    .results{
-        display: none;
-    }
-
-    .results .results-amounts .row{
-        margin-right: 0px;
-    }
-
-    .results-amounts {
-        margin-top: 28px;
-    }
-
-    .results-amounts span {
-        font-size: 12px;
-    }
-
-    .results-amounts .columnValue span{
-        font-size: 14px;
-    }
-    
-    .results-content {
-        margin: 20px 20px 29px 20px;
-    }
-    
-    .sliderContainer{
-        line-height: 0;
-    }
-
-    .total-amounts span{
-        font-size: 12px;
-    }
-
-    .total-amounts .total-value{
-        font-size: 18px;
-    }
+.years-of-mortgage .rangeSlider{
+    margin: 10px 0px 10px 0px;
 }
 
-/* iPhone 5/SE - Landscape Mode */
-@media only screen 
-    and (min-device-width: 320px) 
-    and (max-device-width: 568px)
-    and (-webkit-min-device-pixel-ratio: 2)
-    and (orientation: landscape) {
+/* DESKTOP */
+@media (min-width: 768px){
+    .annual-amounts{
+        margin-top: 20px;
+        display: flex;
+    }
+    
+    .annual-insurance{
+        width: 50%;
+    }
+    
+    .annual-tax{
+        width: 50%;
+        margin-right: 15px;
+    }    
+    
     .calculate{
-        margin-bottom: 20px;
-    }   
-
-    .calculator{
-        margin: 20px 10px 0px 10px;
-        width: 548px;
-    }
-
-    .calculator .calculator__content{
-        padding: 0;
-        margin: 15px 20px 0px 20px;
-    }
-
-    .calculator .calculator__content hr {
-        margin-top: 5px;
-    }
-
-    .calculator .calculator__content__title span{
-        font-size: 14px;
-        line-height: 1.67;
-        letter-spacing: 0.2px;
-    }
-
-    .calculator .calculator__content .calculator__content__body{
-        padding: 0;
-        margin-top: 15px;
-    }
-
-    .calculator .calculator__content__body span{
-        font-size: 12px;
-        line-height: 1.67;
-        letter-spacing: 0.2px;
-    }
-
-    .calculator .calculator__content__body input[type=number] {
-        height: 40px;
-        text-indent: 30px;
-    }
-
-    .calculator .calculator__content__body .input-currency:before{
-        top: -5px;
-        left: 15px;
-        font-size: 14px;
-    }
-
-    .calculator .calculator__content__body .annual-amounts input{
-        width: 242px;
-        padding-right: 0px;
-    }
-
-    .calculator .calculator__content__body .annual-tax{
-        margin-right: 20px;
-    }
-
-    .header{
-        padding: 0;
-        margin: 23px 80px 10px 20px;
-    }
-
-    .header hr{
-        width: 546px;
-    }
-
-    .header span{
-        font-size: 20px;
-        line-height: 1.2;
-        letter-spacing: 0.5px;
-    }
-
-    input[type='range'] {
-        width: 385px;
-    }
-
-    #loan-amount{
-        padding: 0;
-        width: 506px;
-        text-indent: 30px;
-    }
-
-    .loan-amount {
-        margin-top: 22px;
-    }
-
-    .maxValue{
-        font-size: 14px;
-        margin: 0px 0px 0px 4.5px;
-    }
-
-    .minValue{
-        font-size: 14px;
-        margin: 0px 16px 0px 0px;
-    }
-
-    .output {
-        height: 40px;
-        margin: 0;
-        padding: 0;
-        line-height: 2.5;
-        margin-top: -15px;
-    }
-
-    .rangeSlider{
-        margin: 10px 0px 10px 0px;
-    }
-
-    #results{
-        margin: 0px 10px 122px 10px;
-        width: 548px;
+        margin-top: 20px;
     }
     
-    .results{
-        display: none;
-    }
-
-    .results .results-amounts .row{
-        margin-right: 0px;
-    }
-
-    .results-amounts {
-        margin-top: 28px;
-    }
-
-    .results-amounts span{
-        font-size: 12px;
-        line-height: 2;
-    }
-
-    .results-amounts .columnValue span{
-        font-size: 14px;
-    }
-    
-    .results-content {
-        margin: 20px 20px 29px 20px;
-    }
-    
-    .sliderContainer{
-        line-height: 0;
-    }
-
-    .total-amounts span{
-        font-size: 12px;
-    }
-
-    .total-amounts .columnValue span{
-        font-size: 18px;
-    }
-}
-
-/* Galaxy S6 - Portrait Mode */
-@media screen 
-  and (device-width: 360px) 
-  and (device-height: 640px) 
-  and (-webkit-device-pixel-ratio: 4) 
-  and (orientation: portrait) {
-    .calculate{
-        margin-bottom: 20px;
-    }   
-
-    .calculator{
-        margin: 20px 10px 0px 10px;
-        width: 340px;
-    }
-
-    .calculator .calculator__content{
-        padding: 0;
-        margin: 15px 20px 0px 20px;
-    }
-
-    .calculator .calculator__content hr {
-        margin-top: 5px;
-    }
-
-    .calculator .calculator__content__title span{
-        font-size: 12px;
-        line-height: 1.67;
-        letter-spacing: 0.2px;
-    }
-
-    .calculator .calculator__content .calculator__content__body{
-        padding: 0;
-        margin-top: 15px;
-    }
-
-    .calculator .calculator__content__body span{
-        font-size: 12px;
-        line-height: 1.67;
-        letter-spacing: 0.2px;
-    }
-
-    .calculator .calculator__content__body input[type=number] {
-        height: 40px;
-        text-indent: 30px;
-    }
-
-    .calculator .calculator__content__body .input-currency:before{
-        top: -5px;
-        left: 15px;
-        font-size: 14px;
-    }
-
-    .calculator .calculator__content__body .annual-amounts input{
-        width: 138px;
-        padding-right: 0px;
-    }
-
-    .calculator .calculator__content__body .annual-tax{
-        margin-right: 20px;
-    }
-
-    .header{
-        padding: 0;
-        margin: 23px 80px 10px 20px;
-    }
-
-    .header hr{
-        width: 338px;
-    }
-
-    .header span{
-        font-size: 20px;
-        line-height: 1.2;
-        letter-spacing: 0.5px;
-    }
-
-    input[type='range'] {
-        width: 185px;
-    }
-
-    #loan-amount{
-        padding: 0;
-        width: 298px;
-        text-indent: 30px;
-    }
-
-    .loan-amount {
-        margin-top: 22px;
-    }
-
-    .maxValue{
-        font-size: 14px;
-        margin: 0px 0px 0px 4.5px;
-    }
-
-    .minValue{
-        font-size: 14px;
-        margin: 0px 16px 0px 0px;
-    }
-
-    .output {
-        height: 40px;
-        margin: 0;
-        padding: 0;
-        line-height: 2.5;
-        margin-top: -15px;
-    }
-
-    .rangeSlider{
-        margin: 10px 0px 10px 0px;
-    }
-
-    #results{
-        margin: 0px 10px 122px 10px;
-        width: 340px;
-    }
-    
-    .results{
-        display: none;
-    }
-
-    .results .results-amounts .row{
-        margin-right: 0px;
-    }
-
-    .results-amounts {
-        margin-top: 28px;
-    }
-
-    .results-amounts span {
-        font-size: 12px;
-    }
-
-    .results-amounts .columnValue span{
-        font-size: 14px;
-    }
-    
-    .results-content {
-        margin: 20px 20px 29px 20px;
-    }
-    
-    .sliderContainer{
-        line-height: 0;
-    }
-
-    .total-amounts span{
-        font-size: 12px;
-    }
-
-    .total-amounts .total-value{
-        font-size: 18px;
-    }
-}
-
-/* Galaxy S6 - Landscape Mode */
-@media screen 
-  and (device-width: 360px) 
-  and (device-height: 640px) 
-  and (-webkit-device-pixel-ratio: 4) 
-  and (orientation: landscape) {
-    .calculate{
-        margin-bottom: 20px;
-    }   
-
-    .calculator{
-        margin: 20px 10px 0px 10px;
-        width: 620px;
-    }
-
-    .calculator .calculator__content{
-        padding: 0;
-        margin: 15px 20px 0px 20px;
-    }
-
-    .calculator .calculator__content hr {
-        margin-top: 5px;
-    }
-
-    .calculator .calculator__content__title span{
-        font-size: 14px;
-        line-height: 1.67;
-        letter-spacing: 0.2px;
-    }
-
-    .calculator .calculator__content .calculator__content__body{
-        padding: 0;
-        margin-top: 15px;
-    }
-
-    .calculator .calculator__content__body span{
-        font-size: 12px;
-        line-height: 1.67;
-        letter-spacing: 0.2px;
-    }
-
-    .calculator .calculator__content__body input[type=number] {
-        height: 40px;
-        text-indent: 30px;
-    }
-
-    .calculator .calculator__content__body .input-currency:before{
-        top: -5px;
-        left: 15px;
-        font-size: 14px;
-    }
-
-    .calculator .calculator__content__body .annual-amounts input{
-        width: 278px;
-        padding-right: 0px;
-    }
-
-    .calculator .calculator__content__body .annual-tax{
-        margin-right: 20px;
-    }
-
-    .header{
-        padding: 0;
-        margin: 23px 80px 10px 20px;
-    }
-
-    .header hr{
-        width: 618px;
-    }
-
-    .header span{
-        font-size: 20px;
-        line-height: 1.2;
-        letter-spacing: 0.5px;
-    }
-
-    input[type='range'] {
-        width: 460px;
-    }
-
-    #loan-amount{
-        padding: 0;
-        width: 578px;
-        text-indent: 30px;
-    }
-
-    .loan-amount {
-        margin-top: 22px;
-    }
-
-    .maxValue{
-        font-size: 14px;
-        margin: 0px 0px 0px 4.5px;
-    }
-
-    .minValue{
-        font-size: 14px;
-        margin: 0px 16px 0px 0px;
-    }
-
-    .output {
-        height: 40px;
-        margin: 0;
-        padding: 0;
-        line-height: 2.5;
-        margin-top: -15px;
-    }
-
-    .rangeSlider{
-        margin: 10px 0px 10px 0px;
-    }
-
-    #results{
-        margin: 0px 10px 122px 10px;
-        width: 620px;
-    }
-    
-    .results{
-        display: none;
-    }
-
-    .results .results-amounts .row{
-        margin-right: 0px;
-    }
-
-    .results-amounts {
-        margin-top: 28px;
-    }
-
-    .results-amounts span{
-        font-size: 12px;
-        line-height: 2;
-    }
-
-    .results-amounts .columnValue span{
-        font-size: 14px;
-    }
-    
-    .results-content {
-        margin: 20px 20px 29px 20px;
-    }
-    
-    .sliderContainer{
-        line-height: 0;
-    }
-
-    .total-amounts span{
-        font-size: 12px;
-    }
-
-    .total-amounts .columnValue span{
-        font-size: 18px;
-    }
-}
-
-/* iPhone 6/7/8 - Portrait Mode */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) { 
-    .calculate{
-        margin-bottom: 20px;
-    }   
-
-    .calculator{
-        margin: 20px 10px 0px 10px;
-        width: 355px;
-    }
-
-    .calculator .calculator__content{
-        padding: 0;
-        margin: 15px 20px 0px 20px;
-    }
-
-    .calculator .calculator__content hr {
-        margin-top: 5px;
-    }
-
-    .calculator .calculator__content__title span{
-        font-size: 14px;
-        line-height: 1.67;
-        letter-spacing: 0.2px;
-    }
-
-    .calculator .calculator__content .calculator__content__body{
-        padding: 0;
-        margin-top: 15px;
-    }
-
-    .calculator .calculator__content__body span{
-        font-size: 12px;
-        line-height: 1.67;
-        letter-spacing: 0.2px;
-    }
-
-    .calculator .calculator__content__body input[type=number] {
-        height: 40px;
-        text-indent: 30px;
-    }
-
-    .calculator .calculator__content__body .input-currency:before{
-        top: -5px;
-        left: 15px;
-        font-size: 14px;
-    }
-
-    .calculator .calculator__content__body .annual-amounts input{
-        width: 145px;
-        padding-right: 0px;
-    }
-
-    .calculator .calculator__content__body .annual-tax{
-        margin-right: 20px;
-    }
-
-    .header{
-        padding: 0;
-        margin: 23px 80px 10px 20px;
-    }
-
-    .header hr{
-        width: 353px;
-    }
-
-    .header span{
-        font-size: 20px;
-        line-height: 1.2;
-        letter-spacing: 0.5px;
-    }
-
-    input[type='range'] {
-        width: 200px;
-    }
-
-    #loan-amount{
-        padding: 0;
-        width: 313px;
-        text-indent: 30px;
-    }
-
-    .loan-amount {
-        margin-top: 22px;
-    }
-
-    .maxValue{
-        font-size: 14px;
-        margin: 0px 0px 0px 4.5px;
-    }
-
-    .minValue{
-        font-size: 14px;
-        margin: 0px 16px 0px 0px;
-    }
-
-    .output {
-        height: 40px;
-        margin: 0;
-        padding: 0;
-        line-height: 2.5;
-        margin-top: -15px;
-    }
-
-    .rangeSlider{
-        margin: 10px 0px 10px 0px;
-    }
-
-    #results{
-        margin: 0px 10px 122px 10px;
-        width: 355px;
-    }
-    
-    .results{
-        display: none;
-    }
-
-    .results .results-amounts .row{
-        margin-right: 0px;
-    }
-
-    .results-amounts {
-        margin-top: 28px;
-    }
-
-    .results-amounts span{
-        font-size: 12px;
-    }
-
-    .results-amounts .columnValue span{
-        font-size: 14px;
-    }
-    
-    .results-content {
-        margin: 20px 20px 29px 20px;
-    }
-    
-    .sliderContainer{
-        line-height: 0;
-    }
-
-    .total-amounts span{
-        font-size: 12px;
-    }
-
-    .total-amounts .total-value{
-        font-size: 18px;
-    }
-}
-
-/* iPhone 6/7/8 - Landscape Mode */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: landscape) { 
-    .calculate{
-        margin-bottom: 20px;
-    }   
-
-    .calculator{
-        margin: 20px 10px 0px 10px;
-        width: 647px;
-    }
-
-    .calculator .calculator__content{
-        padding: 0;
-        margin: 15px 20px 0px 20px;
-    }
-
-    .calculator .calculator__content hr {
-        margin-top: 5px;
-    }
-
-    .calculator .calculator__content__title span{
-        font-size: 14px;
-        line-height: 1.67;
-        letter-spacing: 0.2px;
-    }
-
-    .calculator .calculator__content .calculator__content__body{
-        padding: 0;
-        margin-top: 15px;
-    }
-
-    .calculator .calculator__content__body span{
-        font-size: 12px;
-        line-height: 1.67;
-        letter-spacing: 0.2px;
-    }
-
-    .calculator .calculator__content__body input[type=number] {
-        height: 40px;
-        text-indent: 30px;
-    }
-
-    .calculator .calculator__content__body .input-currency:before{
-        top: -5px;
-        left: 15px;
-        font-size: 14px;
-    }
-
-    .calculator .calculator__content__body .annual-amounts input{
-        width: 291px;
-        padding-right: 0px;
-    }
-
-    .calculator .calculator__content__body .annual-tax{
-        margin-right: 20px;
-    }
-
-    .header{
-        padding: 0;
-        margin: 23px 80px 10px 20px;
-    }
-
-    .header hr{
-        width: 645px;
-    }
-
-    .header span{
-        font-size: 20px;
-        line-height: 1.2;
-        letter-spacing: 0.5px;
-    }
-
-    input[type='range'] {
-        width: 485px;
-    }
-
-    #loan-amount{
-        padding: 0;
-        width: 605px;
-        text-indent: 30px;
-    }
-
-    .loan-amount {
-        margin-top: 22px;
-    }
-
-    .maxValue{
-        font-size: 14px;
-        margin: 0px 0px 0px 4.5px;
-    }
-
-    .minValue{
-        font-size: 14px;
-        margin: 0px 16px 0px 0px;
-    }
-
-    .output {
-        height: 40px;
-        margin: 0;
-        padding: 0;
-        line-height: 2.5;
-        margin-top: -15px;
-    }
-
-    .rangeSlider{
-        margin: 10px 0px 10px 0px;
-    }
-
-    #results{
-        margin: 0px 10px 122px 10px;
-        width: 647px;
-    }
-    
-    .results{
-        display: none;
-    }
-
-    .results .results-amounts .row{
-        margin-right: 0px;
-    }
-
-    .results-amounts {
-        margin-top: 28px;
-    }
-
-    .results-amounts span{
-        font-size: 12px;
-        line-height: 2;
-    }
-
-    .results-amounts .columnValue span{
-        font-size: 14px;
-    }
-    
-    .results-content {
-        margin: 20px 20px 29px 20px;
-    }
-    
-    .sliderContainer{
-        line-height: 0;
-    }
-
-    .total-amounts span{
-        font-size: 12px;
-    }
-
-    .total-amounts .columnValue span{
-        font-size: 18px;
-    }
-}
-
-/* iPhone X - Portrait Mode */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: portrait) {
-    .calculate{
-        margin-bottom: 20px;
-    }   
-
-    .calculator{
-        margin: 20px 10px 0px 10px;
-        width: 355px;
-    }
-
-    .calculator .calculator__content{
-        padding: 0;
-        margin: 15px 20px 0px 20px;
-    }
-
-    .calculator .calculator__content hr {
-        margin-top: 5px;
-    }
-
-    .calculator .calculator__content__title span{
-        font-size: 14px;
-        line-height: 1.67;
-        letter-spacing: 0.2px;
-    }
-
-    .calculator .calculator__content .calculator__content__body{
-        padding: 0;
-        margin-top: 15px;
-    }
-
-    .calculator .calculator__content__body span{
-        font-size: 12px;
-        line-height: 1.67;
-        letter-spacing: 0.2px;
-    }
-
-    .calculator .calculator__content__body input[type=number] {
-        height: 40px;
-        text-indent: 30px;
-    }
-
-    .calculator .calculator__content__body .input-currency:before{
-        top: -5px;
-        left: 15px;
-        font-size: 14px;
-    }
-
-    .calculator .calculator__content__body .annual-amounts input{
-        width: 145px;
-        padding-right: 0px;
-    }
-
-    .calculator .calculator__content__body .annual-tax{
-        margin-right: 20px;
-    }
-
-    .header{
-        padding: 0;
-        margin: 23px 80px 10px 20px;
-    }
-
-    .header hr{
-        width: 353px;
-    }
-
-    .header span{
-        font-size: 20px;
-        line-height: 1.2;
-        letter-spacing: 0.5px;
-    }
-
-    input[type='range'] {
-        width: 200px;
-    }
-
-    #loan-amount{
-        padding: 0;
-        width: 313px;
-        text-indent: 30px;
-    }
-
-    .loan-amount {
-        margin-top: 22px;
-    }
-
-    .maxValue{
-        font-size: 14px;
-        margin: 0px 0px 0px 4.5px;
-    }
-
-    .minValue{
-        font-size: 14px;
-        margin: 0px 16px 0px 0px;
-    }
-
-    .output {
-        height: 40px;
-        margin: 0;
-        padding: 0;
-        line-height: 2.5;
-        margin-top: -15px;
-    }
-
-    .rangeSlider{
-        margin: 10px 0px 10px 0px;
-    }
-
-    #results{
-        margin: 0px 10px 122px 10px;
-        width: 355px;
-    }
-    
-    .results{
-        display: none;
-    }
-
-    .results .results-amounts .row{
-        margin-right: 0px;
-    }
-
-    .results-amounts {
-        margin-top: 28px;
-    }
-
-    .results-amounts span{
-        line-height: 1.75;
-    }
-
-    .results-amounts .columnValue span{
-        font-size: 16px;
-    }
-    
-    .results-content {
-        margin: 20px 20px 29px 20px;
-    }
-    
-    .sliderContainer{
-        line-height: 0;
-    }
-
-    .total-amounts span{
-        font-size: 14px;
-    }
-
-    .total-amounts .columnValue span{
-        font-size: 20px;
-    }
-}
-
-/* iPhone X - Landscape Mode */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: landscape) { 
-    .calculate{
-        margin-bottom: 20px;
-    }   
-
-    .calculator{
-        margin: 20px 10px 0px 10px;
-        width: 792px;
-    }
-
-    .calculator .calculator__content{
-        padding: 0;
-        margin: 15px 20px 0px 20px;
-    }
-
-    .calculator .calculator__content hr {
-        margin-top: 5px;
-    }
-
-    .calculator .calculator__content__title span{
-        font-size: 14px;
-        line-height: 1.67;
-        letter-spacing: 0.2px;
-    }
-
-    .calculator .calculator__content .calculator__content__body{
-        padding: 0;
-        margin-top: 15px;
-    }
-
-    .calculator .calculator__content__body span{
-        font-size: 12px;
-        line-height: 1.67;
-        letter-spacing: 0.2px;
-    }
-
-    .calculator .calculator__content__body input[type=number] {
-        height: 40px;
-        text-indent: 30px;
-    }
-
-    .calculator .calculator__content__body .input-currency:before{
-        top: -5px;
-        left: 15px;
-        font-size: 14px;
-    }
-
-    .calculator .calculator__content__body .annual-amounts input{
-        width: 364px;
-        padding-right: 0px;
-    }
-
-    .calculator .calculator__content__body .annual-tax{
-        margin-right: 20px;
-    }
-
-    .header{
-        padding: 0;
-        margin: 23px 80px 10px 20px;
-    }
-
-    .header hr{
-        width: 790px;
-    }
-
-    .header span{
-        font-size: 20px;
-        line-height: 1.2;
-        letter-spacing: 0.5px;
-    }
-
-    input[type='range'] {
-        width: 630px;
-    }
-
-    #loan-amount{
-        padding: 0;
-        width: 750px;
-        text-indent: 30px;
-    }
-
-    .loan-amount {
-        margin-top: 22px;
-    }
-
-    .maxValue{
-        font-size: 14px;
-        margin: 0px 0px 0px 4.5px;
-    }
-
-    .minValue{
-        font-size: 14px;
-        margin: 0px 16px 0px 0px;
-    }
-
-    .output {
-        height: 40px;
-        margin: 0;
-        padding: 0;
-        line-height: 2.5;
-        margin-top: -15px;
-    }
-
-    .rangeSlider{
-        margin: 10px 0px 10px 0px;
-    }
-
-    #results{
-        margin: 0px 10px 122px 10px;
-        width: 792px;
-    }
-    
-    .results{
-        display: none;
-    }
-
-    .results .results-amounts .row{
-        margin-right: 0px;
-    }
-
-    .results-amounts {
-        margin-top: 28px;
-    }
-
-    .results-amounts span{
-        font-size: 12px;
-        line-height: 2;
-    }
-
-    .results-amounts .columnValue span{
-        font-size: 14px;
-    }
-    
-    .results-content {
-        margin: 20px 20px 29px 20px;
-    }
-    
-    .sliderContainer{
-        line-height: 0;
-    }
-
-    .total-amounts span{
-        font-size: 12px;
-    }
-
-    .total-amounts .columnValue span{
-        font-size: 18px;
-    }
-}
-
-/* iPhone 6/7/8 Plus - Portrait Mode */
-@media only screen 
-  and (min-device-width: 414px) 
-  and (max-device-width: 736px) 
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: portrait) { 
-    .calculate{
-        margin-bottom: 20px;
-    }   
-
-    .calculator{
-        margin: 20px 10px 0px 10px;
-        width: 394px;
-    }
-
-    .calculator .calculator__content{
-        padding: 0;
-        margin: 15px 20px 0px 20px;
-    }
-
-    .calculator .calculator__content hr {
-        margin-top: 5px;
-    }
-
-    .calculator .calculator__content__title span{
-        font-size: 14px;
-        line-height: 1.67;
-        letter-spacing: 0.2px;
-    }
-
-    .calculator .calculator__content .calculator__content__body{
-        padding: 0;
-        margin-top: 15px;
-    }
-
-    .calculator .calculator__content__body span{
-        font-size: 12px;
-        line-height: 1.67;
-        letter-spacing: 0.2px;
-    }
-
-    .calculator .calculator__content__body input[type=number] {
-        height: 40px;
-        text-indent: 30px;
-    }
-
-    .calculator .calculator__content__body .input-currency:before{
-        top: -5px;
-        left: 15px;
-        font-size: 14px;
-    }
-
-    .calculator .calculator__content__body .annual-amounts input{
-        width: 165px;
-        padding-right: 0px;
-    }
-
-    .calculator .calculator__content__body .annual-tax{
-        margin-right: 20px;
-    }
-
-    .header{
-        padding: 0;
-        margin: 23px 80px 10px 20px;
-    }
-
-    .header hr{
-        width: 392px;
-    }
-
-    .header span{
-        font-size: 20px;
-        line-height: 1.2;
-        letter-spacing: 0.5px;
-    }
-
-    input[type='range'] {
-        width: 230px;
-    }
-
-    #loan-amount{
-        padding: 0;
-        width: 352px;
-        text-indent: 30px;
-    }
-
-    .loan-amount {
-        margin-top: 22px;
-    }
-
-    .maxValue{
-        font-size: 14px;
-        margin: 0px 0px 0px 4.5px;
-    }
-
-    .minValue{
-        font-size: 14px;
-        margin: 0px 16px 0px 0px;
-    }
-
-    .output {
-        height: 40px;
-        margin: 0;
-        padding: 0;
-        line-height: 2.5;
-        margin-top: -15px;
-    }
-
-    .rangeSlider{
-        margin: 10px 0px 10px 0px;
-    }
-
-    #results{
-        margin: 0px 10px 122px 10px;
-        width: 394px;
-    }
-    
-    .results{
-        display: none;
-    }
-
-    .results .results-amounts .row{
-        margin-right: 0px;
-    }
-
-    .results-amounts {
-        margin-top: 28px;
-    }
-
-    .results-amounts span{
-        font-size: 14px;
-        line-height: 2;
-    }
-
-    .results-amounts .columnValue span{
-        font-size: 16px;
-    }
-    
-    .results-content {
-        margin: 20px 20px 29px 20px;
-    }
-    
-    .sliderContainer{
-        line-height: 0;
-    }
-
-    .total-amounts span{
-        font-size: 14px;
-    }
-
-    .total-amounts .columnValue span{
-        font-size: 20px;
-    }
-}
-
-/* iPhone 6/7/8 Plus - Landscape Mode */
-@media only screen 
-  and (min-device-width: 414px) 
-  and (max-device-width: 736px) 
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: landscape) { 
-    .calculate{
-        margin-bottom: 20px;
-    }   
-
-    .calculator{
-        margin: 20px 10px 0px 10px;
-        width: 716px;
-    }
-
-    .calculator .calculator__content{
-        padding: 0;
-        margin: 15px 20px 0px 20px;
-    }
-
-    .calculator .calculator__content hr {
-        margin-top: 5px;
-    }
-
-    .calculator .calculator__content__title span{
-        font-size: 14px;
-        line-height: 1.67;
-        letter-spacing: 0.2px;
-    }
-
-    .calculator .calculator__content .calculator__content__body{
-        padding: 0;
-        margin-top: 15px;
-    }
-
-    .calculator .calculator__content__body span{
-        font-size: 12px;
-        line-height: 1.67;
-        letter-spacing: 0.2px;
-    }
-
-    .calculator .calculator__content__body input[type=number] {
-        height: 40px;
-        text-indent: 30px;
-    }
-
-    .calculator .calculator__content__body .input-currency:before{
-        top: -5px;
-        left: 15px;
-        font-size: 14px;
-    }
-
-    .calculator .calculator__content__body .annual-amounts input{
-        width: 326px;
-        padding-right: 0px;
-    }
-
-    .calculator .calculator__content__body .annual-tax{
-        margin-right: 20px;
-    }
-
-    .header{
-        padding: 0;
-        margin: 23px 80px 10px 20px;
-    }
-
-    .header hr{
-        width: 714px;
-    }
-
-    .header span{
-        font-size: 20px;
-        line-height: 1.2;
-        letter-spacing: 0.5px;
-    }
-
-    input[type='range'] {
-        width: 550px;
-    }
-
-    #loan-amount{
-        padding: 0;
-        width: 674px;
-        text-indent: 30px;
-    }
-
-    .loan-amount {
-        margin-top: 22px;
-    }
-
-    .maxValue{
-        font-size: 14px;
-        margin: 0px 0px 0px 4.5px;
-    }
-
-    .minValue{
-        font-size: 14px;
-        margin: 0px 16px 0px 0px;
-    }
-
-    .output {
-        height: 40px;
-        margin: 0;
-        padding: 0;
-        line-height: 2.5;
-        margin-top: -15px;
-    }
-
-    .rangeSlider{
-        margin: 10px 0px 10px 0px;
-    }
-
-    #results{
-        margin: 0px 10px 122px 10px;
-        width: 716px;
-    }
-    
-    .results{
-        display: none;
-    }
-
-    .results .results-amounts .row{
-        margin-right: 0px;
-    }
-
-    .results-amounts {
-        margin-top: 28px;
-    }
-
-    .results-amounts span{
-        font-size: 12px;
-        line-height: 2;
-    }
-
-    .results-amounts .columnValue span{
-        font-size: 14px;
-    }
-    
-    .results-content {
-        margin: 20px 20px 29px 20px;
-    }
-    
-    .sliderContainer{
-        line-height: 0;
-    }
-
-    .total-amounts span{
-        font-size: 12px;
-    }
-
-    .total-amounts .columnValue span{
-        font-size: 18px;
-    }
-}
-
-/* iPad Mini - Portrait Mode */
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (orientation: portrait) 
-  and (-webkit-min-device-pixel-ratio: 1) {
-    .calculate{
-        margin-bottom: 20px;
-    }   
-
     .calculate button{
-        font-size: 18px;
+        width: 100%;
+        height: 45px;
+        border-radius: 4px;
+        background-color: #0077c0;
+        cursor: pointer;
+        font-size: 16px;
+        letter-spacing: 0.3px;
+        text-align: center;
+        color: #ffffff;
+        text-transform: uppercase;
+        border: none;
     }
-
+    
     .calculator{
-        margin: 20px 10px 0px 10px;
-        width: 748px;
+        margin: 25px 0px 97px 70px;
+        /*height: 522px;*/
+        width: 470px;
+        border-radius: 4px;
+        box-shadow: 0 2px 6px 2px rgba(0, 0, 0, 0.1);
     }
-
+    
     .calculator .calculator__content{
-        padding: 0;
-        margin: 15px 20px 0px 20px;
+        /*width: 100%;*/
+        padding: 34px 0px 40px 0px;
+        margin: 0px 40px 0px 40px;
     }
 
-    .calculator .calculator__content hr {
-        margin-top: 5px;
-    }
-
-    .calculator .calculator__content__title span{
-        font-size: 22px;
-        line-height: 1.67;
-        letter-spacing: 0.2px;
+    .calculator .calculator__content span{
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.3;
     }
 
     .calculator .calculator__content .calculator__content__body{
-        padding: 0;
-        margin-top: 15px;
+        margin-top: 35.5px;
     }
 
-    .calculator .calculator__content__body span{
-        font-size: 18px;
-        line-height: 1.67;
+    .calculator__content .calculator__content__body span{
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 1.21;
         letter-spacing: 0.2px;
     }
-
-    .calculator .calculator__content__body input[type=number] {
+    
+    .calculator__content__body .emptyFieldMessage{
+        display: block;
+        color: #da3535;
+        font-size: 12px;
+        padding-top: 3px;
+    }
+    
+    .calculator__content__body span{
+        font-family: HelveticaNeue-Bold;
+        font-size: 14px;
+        line-height: 1.21;
+        letter-spacing: 0.2px;
+        text-align: left;
+        color: #3e3d3f;
+    }
+    
+    .calculator__content__body input[type=number]{
         height: 45px;
-        text-indent: 30px;
-        font-size: 18px;
+        border-radius: 4px;
+        /*box-shadow: 0 0 4px 0 rgba(62, 61, 63, 0.62);*/
+        width: 175px;
+        margin-top: 5px;
+        border: 1px solid #a6a6a6;
+        font-size: 16px;
+        letter-spacing: 0.3px;
+        text-align: left;
+        color: #3e3d3f;
+        text-indent: 40px;
+        padding-right: 10px;
     }
-
-    .calculator .calculator__content__body .input-currency:before{
-        top: -4px;
-        left: 15px;
-        font-size: 18px;
+    
+    .calculator__content__body input[type=number]:focus{
+        box-shadow: 0 0 4px 0 rgba(62, 61, 63, 0.62);
+        border: 1px solid #3e3d3f;
     }
-
-    .calculator .calculator__content__body .annual-amounts input{
-        width: 342px;
-        padding-right: 0px;
+    
+    .calculator__content__body .input-currency {
+        position: relative;
     }
-
-    .calculator .calculator__content__body .annual-tax{
-        margin-right: 20px;
+    
+    .calculator__content__body .input-currency:before {
+        position: absolute;
+        top: -1.5px;
+        left: 25px;
+        content:"$";
+        font-size: 16px;
+        letter-spacing: 0.3px;
+        text-align: left;
+        color: #3e3d3f;
     }
-
-    .header{
-        padding: 0;
-        margin: 23px 80px 10px 20px;
+    
+    .container{
+        display: flex;
     }
-
-    .header hr{
-        width: 746px;
+    
+    html{
+      scroll-behavior: smooth;
     }
-
-    .header span{
-        font-size: 22px;
-        line-height: 1.2;
-        letter-spacing: 0.5px;
-    }
-
+    
     input[type='range'] {
-        width: 550px;
+      display: inline-block;
+      width: 75%;
     }
-
+    
+    input[type='range']:focus {
+      outline: none;
+    }
+    
+    input[type='range'],
+    input[type='range']::-webkit-slider-runnable-track,
+    input[type='range']::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          border-radius: 10px;
+        -moz-box-shadow: 2px 2px 3px #666;
+        outline: 0;
+        -webkit-appearance: none;
+    }
+    
+    input[type=range]::-webkit-slider-thumb {
+      background-color: #ffffff;
+      width: 20px;
+      height: 20px;
+      border: 3px solid #ffffff;
+      box-shadow: 0 1px 2px 0 #000;
+      border-radius: 50%;
+      margin-top: -6px;
+    }
+    
+    input[type=range]::-moz-range-thumb {
+      background-color: #ffffff;
+      width: 15px;
+      height: 15px;
+      border: 3px solid #ffffff;
+      box-shadow: 0 1px 2px 0 #000;
+      border-radius: 50%;
+    }
+    
+    input[type=range]::-ms-thumb {
+      background-color: #ffffff;
+      width: 20px;
+      height: 20px;
+      border: 3px solid #ffffff;
+      box-shadow: 0 1px 2px 0 #000;
+      border-radius: 50%;
+    }
+    
+    input[type=range]::-webkit-slider-runnable-track {
+      background-color: #ffffff;
+      height: 8px;
+    }
+    
+    input[type=range]:focus::-webkit-slider-runnable-track {
+      outline: none;
+    }
+    
+    input[type=range]::-moz-range-track {
+      background-color: #777;
+      height: 8px;
+    }
+    
+    input[type=range]::-ms-track {
+      background-color: #777;
+      height: 8px;
+    }
+    
+    input[type=range]::-ms-fill-lower {
+      background-color: #1091cc;
+    }
+    
+    input[type=range]::-ms-fill-upper {
+      background-color: #d8d8d8;
+    }
+    
+    .input-currency.left:before {
+        left: 5px;
+    }
+    
+    .loan-amount{
+        margin-top: 20px;
+    }
+    
     #loan-amount{
-        padding: 0;
-        width: 706px;
-        text-indent: 30px;
+        width: 97%;
+        padding-right: 10px;
+        padding-left: 0px;
+        text-indent: 40px;
     }
-
-    .loan-amount {
-        margin-top: 22px;
+    
+    #loanAmountErrorMessage, #annualTaxErrorMessage, #annualInsuranceErrorMessage{
+        display: none;
     }
-
-    .maxValue{
-        font-size: 18px;
-        margin: 0px 0px 0px 4.5px;
-    }
-
+    
     .minValue{
-        font-size: 18px;
-        margin: 0px 30px 0px 0px;
+        display: inline-block;
+        font-size: 16px;
+        letter-spacing: 0.3px;
+        text-align: left;
+        color: #3e3d3f;
+        margin: 12.5px 20px 0 0;
+        width: 10px;
     }
-
+    
+    .maxValue{
+        display: inline-block;
+        font-size: 16px;
+        letter-spacing: 0.3px;
+        text-align: left;
+        color: #3e3d3f;
+        margin: 12.5px 15px 0 5px;
+    }
+      
     .output {
-        height: 40px;
+        width: 60px;
+        height: 45px;
+        text-align: center;
+        line-height: 45px;
+        border: solid 1px #cacaca;
+        border-radius: 4px;
+        font-size: 16px;
+        letter-spacing: 0.3px;
+        text-align: center;
+        color: #3e3d3f;
+    }
+    
+    .page{
         margin: 0;
-        padding: 0;
-        line-height: 2.5;
-        margin-top: -15px;
-        width: 10%;
     }
-
-    .rangeSlider{
-        margin: 20px 0px 10px 0px;
+    
+    .rangeSlider {
+        width: 100%;
+        display: flex;
+        margin: 11px auto;
+        color:#aaa;
+        position:relative;
     }
-
-    #results{
-        margin: 0px 10px 122px 10px;
-        width: 748px;
+    
+    .sliderContainer{
+        width: 100%;
+        line-height: 22.5px;
     }
     
     .results{
-        display: none;
+        width: 298px;
+        height: 440px;
+        background-color: #eaf6fa;
+        margin-top: 80px;
+        padding-bottom: 10px;
     }
 
-    .results .results-amounts .row{
-        margin-right: 0px;
+    .results .results-content {
+        margin: 36px 40px 35px 40px;
     }
 
-    .results-amounts {
-        margin-top: 28px;
+    .results .results-content span{
+        font-size: 22px;
     }
-
-    .results-amounts span{
-        font-size: 16px;
+    
+    .results-amounts{
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .results-amounts .columnTitle span{
+        font-size: 14px;
+        line-height: 2.14;
     }
 
     .results-amounts .columnValue span{
         font-size: 18px;
-        font-weight: bold;
+        line-height: 1.67;
+    }
+    
+    .results-amounts .insurance-value{
+        opacity: 0.2;
+        color: #3e3d3f;
+        font-size: 18px;
+        font-family: HelveticaNeue-Bold;
+        margin-bottom: 20px;
+    }
+    
+    .results-amounts .interest-value{
+        opacity: 0.2;
+        color: #3e3d3f;
+        font-size: 18px;
+        font-family: HelveticaNeue-Bold;
+        margin-bottom: 20px;
+    }
+    
+    .results-amounts .row{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .results-amounts .tax-value{
+        opacity: 0.2;
+        color: #3e3d3f;
+        font-size: 18px;
+        font-family: HelveticaNeue-Bold;
+        margin-bottom: 20px;
+    }
+    
+    .results-amounts span{
+        font-size: 14px;
+        line-height: 2.14;
+        text-align: left;
+        color: #3e3d3f;
     }
 
-    .results-content {
-        margin: 20px 20px 29px 20px;
+    .results-content .results-amounts .row{
+        margin-bottom: 20px;
+    }
+    
+    .results-divider{
+        height: 2px;
+        width: 192px;
+        margin: 0;
+        color: #3e3d3f;
+        opacity: 0.5;
+    }
+    
+    .resultsValuesOpacity{
+        opacity: 1;
+    }
+    
+    .showResultsPanel{
+        display: block;
+        margin: 0px 0px 0px 70px;
+        width: 470px;
+        background-color: #eaf6fa;
+        overflow: hidden;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+        height: 0px;
+        padding-bottom: 45px;
+    }
+    
+    .total-amounts{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
     }
 
-    .sliderContainer{
-        line-height: 0;
-    }
-
-    .total-amounts span{
-        font-size: 16px;
+    .total-amounts .columnTitle span{
+        font-size: 18px;
+        line-height: 1.67;
     }
 
     .total-amounts .columnValue span{
         font-size: 22px;
-        font-weight: bold;
+        line-height: 1.36;
+    }
+    
+    .total-amounts .total-value{
+        opacity: 0.2;
+        font-size: 22px;
+        font-family: HelveticaNeue-Bold;
+        line-height: 1.36;
+        text-align: left;
+        color: #3e3d3f;
+    }
+    
+    .total-amounts span{
+        font-size: 18px;
+        line-height: 1.67;
+        text-align: left;
+        color: #3e3d3f;
+    }
+    
+    #total-value{
+        transition:height 0.5s ease-out;
+        height:0;
+        overflow:hidden;
     }
 }
 
 @media screen
-    and (max-width: 840px) {
+    and (max-width: 768px) {
     .calculator{
         margin-bottom: 0px;
     }
@@ -2141,7 +808,7 @@ input[type=range]::-ms-fill-upper {
         -o-transition: all 0.5s;
         transition: all 0.5s;
         height: 0px;
-        padding-bottom: 45px;
+        /*padding-bottom: 45px;*/
     }
 
     .results-amounts .columnValue span{
