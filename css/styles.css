@@ -493,6 +493,14 @@ input[type='range']:focus {
     .container{
         display: flex;
     }
+
+    .header {
+        margin: 10px 50px 0px 30px;
+    }
+
+    .header hr{
+        width: 100%;
+    }
     
     html{
       scroll-behavior: smooth;
